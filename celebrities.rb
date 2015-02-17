@@ -8,32 +8,41 @@ end
 
 
 def name_lengths(celebs)
-
+  celebs.map do |name|
+    name.length
+  end
 end
 
 
 def reverse_celebrity_names(celebs)
-
+  celebs.map do |name|
+    name.reverse
+  end
 end
 
 
 def first_three_celebrities_with_each(celebs)
-
+  celebs.take(3)
 end
 
 
 def first_three_celebrities_without_each(celebs)
-
+  celebs.take(3)
 end
 
 
 def reverse_case_celebrities_names(celebs)
-
+  celebs.map do |name|
+    name.swapcase
+  end
 end
 
 
 def sum_of_all_celebrity_name_lengths(celebs)
-
+  celebs.map do |name|
+    name.length
+  celebs.sum
+ends
 end
 
 
