@@ -11,6 +11,8 @@ def name_lengths(celebs)
   celebs.map do |name|
     name.length
   end
+  # celebs.map { |name| name.length}
+  # celebs.map (&:length)
 end
 
 
@@ -18,16 +20,20 @@ def reverse_celebrity_names(celebs)
   celebs.map do |name|
     name.reverse
   end
+  # celebs.map { |name| name.reverse}
+  # celebs.map (&:reverse)
 end
 
 
 def first_three_celebrities_with_each(celebs)
-  celebs.take(3)
+  celebs[0..2].each do |celeb|
+  end
 end
 
 
 def first_three_celebrities_without_each(celebs)
   celebs.take(3)
+  # celebs[0..2]
 end
 
 
@@ -35,19 +41,37 @@ def reverse_case_celebrities_names(celebs)
   celebs.map do |name|
     name.swapcase
   end
+  # celebs.map { |name| name.swapcase}
+  # celebs.map (&:swapcase)
+
+  # celebs.map do |name|
+  #   name.scan(/./).map do |letter|
+  #     if letter == letter.upcase
+  #       letter = letter.downcase
+  #     else
+  #       letter = letter.upcase
+  #     end
+  #   end.join("")
 end
 
 
 def sum_of_all_celebrity_name_lengths(celebs)
-  celebs.map do |name|
-    name.length
-  celebs.sum
-ends
+  # y = celebs.map { |celebrity| celebrity.length}
+  # y.inject { |sum, x| sum + x}
+
+  celebs.reduce(0) { |acc, c| acc + c.length}
 end
 
 
 def celebrities_with_long_names(celebs)
-
+  celebs.map { |celeb| celeb.length > 5}
+  # celebs.map do |celeb|
+  #   if celeb.length > 6
+  #     true
+  #   else
+  #     false
+  #   end
+  # end
 end
 
 
